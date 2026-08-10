@@ -1,0 +1,4 @@
+interface:
+  display_name: "IP Mini Illustration System"
+  short_description: "Create mini IP illustrations and 3:4 infographics"
+  default_prompt: "Use $ip-illustration-character-system to turn my article into consistent mini IP illustrations or information-rich 3:4 infographics."
