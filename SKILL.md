@@ -40,8 +40,13 @@ Use only these packaged images as style anchors:
 
 - `references/style/style_ref_01_user_docs_reader.png`
 - `references/style/style_ref_02_user_searcher.png`
+- `references/style/style_ref_03_user_catgirl_anchor.png`
 
 They define style, composition, and finish—not the user's character identity. Uploaded character images take precedence for identity.
+
+Use the first two references for sparse scene composition, visibly broken pen contours, and loose line-to-fill registration. Use the third reference for mini character proportions, facial simplification, and the same imperfect line-and-fill finish. Never borrow the third reference's cat ears, green hair, outfit, or other identity traits.
+
+Treat all three references as **mark-making and geometry references, not color-palette references**. Do not copy their muted palette, gray cast, aging, or low saturation. The color lock in section 2 overrides their color treatment.
 
 Do not use generated examples, prior rejected outputs, or unrelated character samples as style references.
 
@@ -51,10 +56,15 @@ Aim for a **mini pen-doodle illustration on a large white canvas**:
 
 - Keep the character and props small, usually occupying 20–35% of the canvas.
 - Preserve abundant empty white space.
-- Use thin-to-medium black pen-like outlines with natural wobble, small hesitations, and occasional tiny breaks.
+- Use thin-to-medium black pen-like outlines with natural wobble, small hesitations, uneven pressure, and clearly visible intermittent breaks.
 - Make shapes slightly awkward and asymmetrical, as if drawn by hand with imperfect control.
-- Use simple, clean, flat color fills in a restrained palette.
-- Allow only tiny edge gaps or slight fill-to-line misalignment; keep the color surfaces clean.
+- Keep major contours mostly readable but not fully sealed. Leave several short, irregular gaps around hair tips, sleeves, hands, shoes, props, and other turning points. Vary gap length and placement so the contour feels hesitant, not uniformly dashed or dotted.
+- Use simple flat color shapes whose interiors remain clean and even, while their edges are deliberately a little misregistered from the black outline. "Clean flat color" describes the fill surface, not perfect clipping.
+- Let selected fills stop slightly short of the outline, cross it by a tiny amount, or leave a narrow white sliver. Make the mismatch noticeable at normal viewing size but small enough to preserve the object and character silhouette.
+- Use a restrained palette. "Restrained" means using fewer colors, not lowering their saturation.
+- Keep colors at normal, clean saturation: preserve clear hue identity, natural skin tone, solid neutral blacks, and fresh accent colors. Match the user's reference colors closely when provided.
+- Prevent an overall faded, dusty, gray-brown, beige, vintage, or low-contrast cast. Do not mix gray or brown into every local color merely to make the image feel handmade.
+- Repeat broken-contour and loose-registration treatment across the character and essential props; do not confine it to one decorative edge.
 - Keep facial features tiny and expressive.
 - Add sweat drops, motion marks, emphasis lines, or small emotion marks only when they improve the scene.
 - Prefer one character plus one to three essential props.
@@ -64,7 +74,10 @@ Avoid:
 
 - crayon, oil-pastel, chalk, watercolor, or dry-brush texture
 - mottled, grainy, streaky, or heavily variegated color blocks
+- uniformly desaturated, faded, dusty, muddy, grayish, brownish, beige-tinted, vintage-filtered, or washed-out palettes
 - glossy anime rendering, 3D rendering, vector-perfect curves, or polished commercial line art
+- continuous perfectly closed outlines around every shape, uniformly dashed outlines, or fills clipped exactly to every contour
+- large sloppy paint spills, severe registration errors, missing facial features, or distortions that weaken identity and legibility
 - large characters filling the frame
 - dense scenery, decorative clutter, dramatic lighting, shadows, gradients, or textured backgrounds
 - random objects that do not communicate the source material
@@ -72,7 +85,7 @@ Avoid:
 
 Use this core phrase in each prompt:
 
-> mini pen-doodle illustration, tiny subject on a large pure-white canvas, naturally wobbly and slightly broken black pen outlines, awkward hand-drawn shapes, clean flat color fills with only subtle edge gaps, sparse composition, childlike messy-cute charm
+> mini pen-doodle illustration, tiny subject on a large pure-white canvas, hesitant wobbly black pen contours with clearly visible irregular breaks, awkward hand-drawn shapes, internally clean flat color shapes deliberately slightly misregistered from the outlines with tiny white slivers or small edge overhangs, normal clear saturation, sparse composition, childlike messy-cute charm; limited color count, not desaturated color; broken but not uniformly dashed, misregistered but still legible
 
 ## 3. Build the character identity
 
@@ -105,7 +118,11 @@ Keep the character small and preserve identical clothing, colors, accessories, a
 ```text
 Create a 1:1 character anchor using GPT Image 2.
 
-STYLE: mini pen-doodle illustration, tiny subject on a large pure-white canvas, naturally wobbly and slightly broken black pen outlines, awkward hand-drawn shapes, clean flat color fills with only subtle edge gaps, sparse composition, childlike messy-cute charm.
+STYLE: mini pen-doodle illustration, tiny subject on a large pure-white canvas, hesitant wobbly black pen contours with clearly visible irregular breaks, awkward hand-drawn shapes, internally clean flat color shapes deliberately slightly misregistered from the outlines, normal clear saturation, sparse composition, childlike messy-cute charm.
+
+MARK-MAKING LOCK: keep major forms readable but do not fully seal every contour. Place several short irregular breaks around hair tips, sleeves, hands, shoes, and clothing turns; vary their length so the line never looks mechanically dashed. On selected edges, let flat fills stop slightly short, leave a narrow white sliver, or cross the outline by a tiny amount. Make this loose registration visible at normal size without becoming sloppy or damaging identity. Do not render vector-perfect closed contours or perfectly clipped fills.
+
+COLOR LOCK: keep the reference colors clean and normally saturated. Preserve natural skin color, neutral solid blacks, and clear signature accent colors. A restrained palette means fewer colors, not faded colors. No dusty, muddy, gray-brown, beige-tinted, vintage-filtered, washed-out, or uniformly desaturated cast.
 
 CHARACTER IDENTITY: [fixed visible traits]
 POSE AND EXPRESSION: front-facing full-body, simple relaxed pose, [expression].
@@ -143,7 +160,11 @@ If the user asked to generate images, proceed after this internal check without 
 ```text
 Create a 1:1 article illustration using GPT Image 2.
 
-STYLE: mini pen-doodle illustration, tiny subject on a large pure-white canvas, naturally wobbly and slightly broken black pen outlines, awkward hand-drawn shapes, clean flat color fills with only subtle edge gaps, sparse composition, childlike messy-cute charm.
+STYLE: mini pen-doodle illustration, tiny subject on a large pure-white canvas, hesitant wobbly black pen contours with clearly visible irregular breaks, awkward hand-drawn shapes, internally clean flat color shapes deliberately slightly misregistered from the outlines, normal clear saturation, sparse composition, childlike messy-cute charm.
+
+MARK-MAKING LOCK: keep forms readable but do not fully seal every contour. Place several short irregular breaks across the character and essential props, especially at tips, corners, overlaps, sleeves, hands, shoes, and prop turns. Vary the breaks so the line never becomes a uniform dotted or dashed effect. Let selected flat fills stop slightly short, leave a narrow white sliver, or cross the outline by a tiny amount. Make the loose registration clearly visible at normal size without becoming sloppy. Do not use vector-perfect closed contours or perfectly clipped fills.
+
+COLOR LOCK: keep every local color clean and normally saturated while limiting the total number of colors. Preserve the character's reference palette and use fresh, clearly distinguishable prop colors. No faded, dusty, muddy, gray-brown, beige-tinted, vintage-filtered, washed-out, or uniformly desaturated cast.
 
 CHARACTER IDENTITY: [repeat the fixed anchor traits precisely].
 ARTICLE IDEA: [the exact idea this image communicates].
@@ -174,7 +195,7 @@ Borrow their useful structures: strong title hierarchy, annotated evidence, numb
 Apply this precedence:
 
 1. The user's character anchor controls identity.
-2. The two approved style images in `references/style/` control drawing style.
+2. The three approved style images in `references/style/` control drawing style and line-to-fill registration, never identity or color saturation.
 3. The three infographic images control layout ideas only.
 
 ### Choose the number of images automatically
@@ -225,8 +246,9 @@ Prepare a page plan containing:
 - Keep body copy readable with a loose black marker or pen feel. Do not render any heading or body copy like a typeset digital font.
 - Prefer short labels, numbers, dates, and concise sentences over paragraphs.
 - Use visibly imperfect hand-drawn boxes, arrows, underlines, circles, stars, and color-coded accents. Make borders wobble, vary line weight, overshoot corners, leave occasional tiny openings, and sometimes show a faint second-pass line. Avoid identical rounded rectangles or mechanically aligned cards.
-- Let selected title underlines, arrows, border accents, and emphasis marks share the same fine-crayon trace; keep large color surfaces clean and flat.
-- Use a restrained accent palette, usually three to five colors plus black.
+- Let selected title underlines, arrows, border accents, and emphasis marks share the same fine-crayon trace. Keep large color surfaces internally even, but let selected illustration, icon, chart, callout, and border fills sit slightly loose against their outlines through tiny white slivers or small overhangs.
+- Use a restrained accent palette, usually three to five colors plus black. Restrain the number of colors, not their saturation: keep accents fresh and clearly identifiable, blacks neutral, and the IP character's reference colors normally saturated.
+- Do not apply a global gray, brown, beige, vintage, faded, or low-contrast color cast to information blocks, charts, accents, or the IP character.
 - Keep charts honest: preserve values, units, order, scale direction, and source notes supplied by the article.
 - Leave breathing room between sections even when the page is information rich.
 - Do not invent facts, dates, quotes, brands, sources, or metrics.
@@ -252,7 +274,7 @@ Create one 3:4 portrait article infographic using GPT Image 2.
 
 VISUAL IDENTITY: use the established IP character exactly. Preserve the fixed face, hair, silhouette, signature colors, and identifying accessories. Adapt the pose, expression, outfit, and props to this page's topic: [contextual character direction].
 
-HOUSE STYLE: cute mini pen-doodle infographic on a clean white canvas. Render the main title and section headings with narrow fine-wax-crayon or colored-pencil strokes: subtle dry gaps, uneven pressure, slight opacity variation, and imperfect baselines. Render body copy as clear loose black marker handwriting. Use naturally wobbly and slightly broken pen outlines; boxes and arrows must look individually hand-drawn with uneven corners, small overshoots, occasional tiny openings, variable line weight, and faint second-pass traces. Use clean flat color fills and a restrained accent palette. Keep visible crayon texture limited to titles, selected border accents, arrows, and emphasis marks; never use broad crayon fill across characters or information blocks. No oil-pastel slabs, grainy color blocks, glossy rendering, digital-font perfection, identical rounded cards, or vector-perfect geometry.
+HOUSE STYLE: cute mini pen-doodle infographic on a clean white canvas. Render the main title and section headings with narrow fine-wax-crayon or colored-pencil strokes: subtle dry gaps, uneven pressure, slight opacity variation, and imperfect baselines. Render body copy as clear loose black marker handwriting. Use hesitant wobbly pen contours with clearly visible irregular breaks; boxes and arrows must look individually hand-drawn with uneven corners, small overshoots, occasional openings, variable line weight, and faint second-pass traces. Keep illustration and diagram fills internally clean and flat but deliberately slightly misregistered from selected outlines through tiny white slivers, shortfalls, or small edge overhangs. Keep forms readable and never turn the contour into a uniform dashed pattern. Do not break text strokes or misregister text enough to hurt legibility. Use a restrained accent palette. "Restrained" means three to five well-chosen accent colors, not faded color: keep every hue at normal clean saturation, keep blacks neutral, and preserve the IP character's reference colors. Keep visible crayon texture limited to titles, selected border accents, arrows, and emphasis marks; never use broad crayon fill across characters or information blocks. No dusty, muddy, gray-brown, beige-tinted, vintage-filtered, washed-out, or uniformly desaturated cast; no perfectly clipped vector fills, oil-pastel slabs, grainy color blocks, glossy rendering, digital-font perfection, identical rounded cards, or vector-perfect geometry.
 
 PAGE GOAL: [one communication job].
 LAYOUT: [overview / process / timeline / comparison / data story / evidence / checklist / conclusion].
@@ -282,6 +304,8 @@ Check each page for:
 6. 3:4 aspect ratio and balanced information density
 7. original mini pen-doodle linework with clean flat fills
 8. fine-crayon title texture, loose handwritten body text, and visibly imperfect non-mechanical borders
+9. normal clean saturation across the IP character, charts, accents, and information blocks, without a faded or gray-brown cast
+10. clearly visible irregular contour breaks and slightly loose line-to-fill registration across illustrations, icons, charts, callouts, and borders without harming text legibility
 
 Regenerate a page when critical text or data is wrong. Keep the accepted pages and repair only the failing page.
 
@@ -292,15 +316,20 @@ Check every output against this order of priority:
 1. It communicates the selected article idea.
 2. The character identity matches the anchor.
 3. The subject is mini and the white space is generous.
-4. The outline feels pen-drawn, wobbly, and slightly broken.
-5. Color fills are flat and clean, without crayon or brush mottling.
-6. No unwanted text or clutter appears.
+4. The outline feels pen-drawn, wobbly, hesitant, and visibly broken at multiple irregular locations rather than fully closed or uniformly dashed.
+5. Flat fills remain internally even but sit slightly loose against selected outline edges through tiny white slivers, shortfalls, or overhangs.
+6. The registration mismatch is visible at normal size without becoming sloppy, distorting identity, or weakening legibility.
+7. Colors retain normal, clear saturation without a dusty, muddy, gray-brown, beige, vintage, or washed-out cast.
+8. No unwanted text or clutter appears.
 
 Regenerate a failed image with a direct correction. Use these repair clauses as needed:
 
 - **Too large:** `Shrink the entire character-and-prop group substantially; keep it near 25% of the canvas and restore large white margins.`
 - **Too polished:** `Make the black pen outline more hesitant, uneven, and occasionally broken; simplify the shapes and remove formal illustration polish.`
+- **Too continuous:** `Break several outline segments at irregular hair tips, sleeves, hands, shoes, prop corners, and turning points. Keep the silhouette readable, but do not leave every contour perfectly closed and do not create a uniform dashed pattern.`
+- **Too perfectly registered:** `Loosen the line-to-fill registration on selected edges. Let flat fills stop slightly short, leave narrow white slivers, or cross the black outline by tiny amounts while keeping fill interiors even, colors saturated, and identity fully legible.`
 - **Too painterly:** `Replace every textured or mottled area with clean flat color; keep roughness only in the black outline.`
+- **Too faded:** `Restore normal clean saturation to every local color while keeping the palette limited. Remove the global gray, brown, beige, dusty, vintage, and washed-out cast; keep blacks neutral, skin natural, and accent colors fresh.`
 - **Too generic:** `Tie the scene directly to [article idea] using [specific action/prop]; remove unrelated decorative objects.`
 - **Identity drift:** `Restore the exact anchor hairstyle, outfit, accessories, palette, face, and proportions.`
 
