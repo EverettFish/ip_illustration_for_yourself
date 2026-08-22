@@ -1,32 +1,23 @@
-# ip_illustration_for_yourself — Remote Reference URL Map
+# ip_illustration_for_yourself — GitHub Reference URLs
 
-RedSkill / 文本型 Agent 无法读取 Skill 包内图片时，使用这里的公开 URL。
+用于不能携带本地参考图片的 Skill 平台。以下均为公开 GitHub Raw 直链，可直接作为图片参考输入。
 
-把 `YOUR_PUBLIC_BASE_URL` 替换成公开托管根地址。
+## Style references
 
-例如：
-- GitHub Raw: `https://raw.githubusercontent.com/<USER>/<REPO>/main/ip_illustration_for_yourself`
-- jsDelivr: `https://cdn.jsdelivr.net/gh/<USER>/<REPO>@main/ip_illustration_for_yourself`
-- 自有 CDN/OSS: `https://cdn.example.com/ip_illustration_for_yourself`
+1. https://raw.githubusercontent.com/EverettFish/ip_illustration_for_yourself/main/references/style/style_ref_01_user_docs_reader.png
+2. https://raw.githubusercontent.com/EverettFish/ip_illustration_for_yourself/main/references/style/style_ref_02_user_searcher.png
+3. https://raw.githubusercontent.com/EverettFish/ip_illustration_for_yourself/main/references/style/style_ref_03_user_catgirl_anchor.png
 
-## Style lock
-1. `YOUR_PUBLIC_BASE_URL/references/style_lock/01_docs_reader_style.png`
-2. `YOUR_PUBLIC_BASE_URL/references/style_lock/02_searcher_style.png`
-3. `YOUR_PUBLIC_BASE_URL/references/style_lock/03_catgirl_anchor.png`
-4. `YOUR_PUBLIC_BASE_URL/references/style_lock/04_catgirl_reading.png`
-5. `YOUR_PUBLIC_BASE_URL/references/style_lock/05_catgirl_glasses.png`
-6. `YOUR_PUBLIC_BASE_URL/references/style_lock/06_catgirl_robots.png`
-7. `YOUR_PUBLIC_BASE_URL/references/style_lock/07_catgirl_chip.png`
-8. `YOUR_PUBLIC_BASE_URL/references/style_lock/08_catgirl_companion.png`
+前三张只控制萌粒钢笔线条、mini 比例、构图和色块错位效果，不控制用户角色身份或配色。用户提供的角色锚点始终拥有更高优先级；目标角色与第三张参考相似时应省略第三张，防止身份串形象。
 
-## Content examples
-1. `YOUR_PUBLIC_BASE_URL/references/content_examples/01_architecture_advantage.png`
-2. `YOUR_PUBLIC_BASE_URL/references/content_examples/02_order_from_chaos.png`
-3. `YOUR_PUBLIC_BASE_URL/references/content_examples/03_judgment_and_selection.png`
+## Infographic layout references
 
-## Character examples
-1. `YOUR_PUBLIC_BASE_URL/references/character_examples/green_catgirl_source.jpg`
-2. `YOUR_PUBLIC_BASE_URL/references/character_examples/blue_hair_creator_source.png`
+1. https://raw.githubusercontent.com/EverettFish/ip_illustration_for_yourself/main/references/infographic-layout/layout_ref_01_annotated_evidence.png
+2. https://raw.githubusercontent.com/EverettFish/ip_illustration_for_yourself/main/references/infographic-layout/layout_ref_02_timeline_dashboard.png
+3. https://raw.githubusercontent.com/EverettFish/ip_illustration_for_yourself/main/references/infographic-layout/layout_ref_03_data_story.png
 
-## 用户后续可追加
-用户可随时继续提供公开图片 URL，例如：品牌 logo、具体产品、App/UI、网页截图、包装、地点照片、课程页、三视图等。保持 style lock，不要让新增参考覆盖整体画风。
+以上三张只控制 3:4 信息图的结构、信息层级和版式，不控制角色身份、具体文字或画面内容。
+
+## Repository
+
+https://github.com/EverettFish/ip_illustration_for_yourself
