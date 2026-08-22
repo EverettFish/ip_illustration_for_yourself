@@ -1,6 +1,6 @@
 ---
 name: ip-illustration-character-system
-description: Build a reusable personal IP character and create consistent mini pen-doodle visuals, including article illustrations and information-rich 3:4 article infographics with an automatically selected page count. Use when the user asks to establish a mascot, make a turnaround sheet, illustrate a long article, create cute knowledge cards or infographics, visualize timelines, processes, comparisons, or data, or keep one IP character consistent across multiple images. Require Codex with GPT Image 2 for direct generation; otherwise hand off a complete prompt package and the official GPT Image 2 API links.
+description: Build a reusable personal IP character and create consistent mini pen-doodle visuals, including article illustrations, information-rich 3:4 article infographics, and themed 3:4 kiss-cut sticker sheets. Use when the user asks to establish a mascot, make a turnaround sheet, illustrate a long article, create cute knowledge cards or infographics, visualize timelines, processes, comparisons, or data, keep one IP character consistent across multiple images, or make stickers, sticker pages, sticker sheets, die-cut stickers, or kiss-cut stickers. Require Codex with GPT Image 2 for direct generation; otherwise hand off a complete prompt package and the official GPT Image 2 API links.
 ---
 
 # IP Mini Illustration System
@@ -9,7 +9,7 @@ description: Build a reusable personal IP character and create consistent mini p
 
 Author: **everettfish**
 
-Create a consistent personal character and use it in sparse, cute article illustrations. Use `gpt-image-2` only.
+Create a consistent personal character and use it in sparse, cute article illustrations, information-rich infographics, or themed sticker sheets. Use `gpt-image-2` only.
 
 ## 0. Check the runtime before doing image work
 
@@ -309,7 +309,159 @@ Check each page for:
 
 Regenerate a page when critical text or data is wrong. Keep the accepted pages and repair only the failing page.
 
-## 6. Validate and repair
+## 6. Create themed 3:4 sticker-sheet sets
+
+Use this workflow whenever the user mentions stickers, a sticker page or sheet, die-cut stickers, kiss-cut stickers, or the Chinese terms “贴纸”“贴纸页”“贴纸图”“异形贴纸”“模切贴纸”.
+
+### Establish the identity before the sheets
+
+Reuse an accepted character anchor when one exists. When the user supplies a character reference but no accepted anchor, first generate the front-facing 1:1 full-body anchor from section 3 in the Skill's house style. Use that generated anchor as the identity reference for every sticker page; do not jump directly from a non-house-style source image to the sticker sheets.
+
+When the user supplies multiple IP characters, repeat the complete anchor-plus-three-page workflow for each IP separately. Do not combine characters on one sheet unless the user explicitly asks for a crossover.
+
+Before planning stickers, write an anchor-fidelity lock that records the exact hair outer silhouette, crown tufts, bang divisions, side-lock length, back-hair length, ear or horn geometry and placement, eye shape and color, face proportions, outfit, accessories, and signature palette. Repeat these invariants in the prompt. Every character appearance—including tiny scenes and head-only stickers—must preserve them; never shorten, simplify, restyle, mirror, or improvise the hairstyle. A head-only sticker must still show the complete anchored hair mass and identifying ears or accessories.
+
+### Default to three theme pages
+
+Unless the user explicitly changes the themes or count, create exactly three 3:4 portrait sticker sheets per IP, one page per generation call and in this order:
+
+1. **Life / eating, drinking, and leisure:** everyday food, drinks, rest, entertainment, outings, hobbies, and playful reactions.
+2. **Work:** a preserved anchor identity adapted through office actions and removable outfit variations such as a simple suit, coffee, a silver MacBook with no visible logo, notebook, presentation board, headphones, or desk accessories.
+3. **Self-media / creator support:** heart-hands, thumbs-up, visual like and repost gestures, thanking supporters, filming, editing, posting, microphone, phone, camera, ring light, hearts, and share arrows. Communicate these ideas visually by default. Use short copy such as `比心`, `求赞`, `求转发`, or `感谢支持` only when the user explicitly requests words or when the intended meaning cannot be communicated clearly without them.
+
+Use an English thematic series name in the header by default: `Life Stickers`, `Work Stickers`, and `Media Stickers`. Never put the IP name, a person's name, account handle, or other personal identifier in the header unless the user explicitly requests it.
+
+Vary the character action, expression, crop, prop combination, and decorative motif across and within the three pages. Preserve the fixed face, hair, skin tone, silhouette, signature colors, and identifying accessories even when clothing changes for a theme.
+
+### Build one coherent peel-off sticker page
+
+- Use a 3:4 portrait canvas with two integrated zones: a shallow illustrated series header and a larger light-pastel sticker field. Keep both zones flat and free of paper grain, gradients, realistic shadows, or mockup texture.
+- Reserve only the top 12–16% for one full-width rectangular card header in a clearly different flat color from the sticker field. Keep the color block complete from left edge to right edge with no packaging hole.
+- Render one short locked English thematic series name of one to three words inside the header. Draw it with the naive mouse-lettering rules below. Do not use a character name, person's name, handle, or personal identifier.
+- Make the entire header a small complete mini illustration rather than a sticker: integrate one tiny appearance of the accepted IP into a simple theme scene such as grass and flowers, a desk edge, or a mini creator studio. Let the scene merge naturally into the color block. Do not add a white die-cut border, sticker halo, separate sticker contour, or cut line around any header character, prop, text, or scene.
+- Use the lower 84–88% as one uninterrupted very light pastel sticker field.
+- Arrange 10–20 separate die-cut pieces in the sticker field; default to 18 when no count is supplied.
+- Keep the main stickers modest in size, then fill interstitial gaps with several much smaller theme-related stickerlets. Aim for the combined cut-border footprint to cover about 75–82% of the sticker field without touching or crowding. After placing the primary stickers, perform a density pass and add or reposition micro stickerlets until no empty pocket is much larger than one planned micro stickerlet.
+- Give every sticker its own free, irregular die-cut silhouette and a clearly visible continuous white or very pale border. The outer cut border may be clean and closed for production readability; the illustration inside it must retain the Skill's hesitant broken pen contours and slightly misregistered flat fills.
+- Keep every body sticker fully visible, separated, and non-overlapping. Preserve clear but compact paper gaps between cut borders and comfortable margins along the sticker field.
+- Arrange the body as a balanced staggered field with a gentle diagonal or S-curve rhythm. Occupy the upper, middle, and lower parts of the sticker field; distribute gaps evenly so no local void feels much larger than a small-to-medium sticker. Keep the overall bounding shape tidy: align the leftmost and rightmost sticker extents into two clean visual rails with roughly equal side margins while offsetting individual sticker centers. Never create straight rows, uniform columns, a mechanical grid, or a separate bottom row of standalone props.
+- Make nearby stickers meaningfully related as loose visual micro-clusters while keeping their cut borders separate. For example, place a tiny breakfast scene near a drink-and-snack cluster, or a tiny editing scene near a camera-and-headphone cluster. Do not scatter unrelated orphan objects merely to fill gaps.
+- Vary both scale and silhouette decisively, but keep the composition orderly. Mix two or three wider scene stickers, several medium tall or diagonal action stickers, compact roundish or cropped head stickers, angular or elongated prop clusters, and one small irregular decoration cluster. Use only gentle rotations and stable upright reading direction. Avoid giving every sticker the same rounded blob, oval, full-body pose, or repeated cut shape.
+- Use this default 18-piece content mix unless the theme suggests a better equivalent: 3 scene-led stickers in which the IP is small and the activity or setting is primary; 3 full-body or half-body character-action stickers; 3 head-only, face-only, or expressive bust stickers; 3 tightly related prop clusters; and 6 very small theme-specific filler stickerlets.
+- Keep the IP as the identity anchor without making every sticker character-dominant. A page may include tiny characters inside scenes, cropped heads, hands, or partial silhouettes. Do not default to a page of uniformly sized full-body figures.
+- Build prop stickers as small related clusters rather than one isolated object each when it improves coherence. Interleave them beside related scenes, actions, and heads; do not line all prop-only stickers along one edge or collect them below the character content.
+- Use six to eight of the smallest pieces as theme-related filler stickerlets, usually about 2–5% of the sticker-field width, while keeping the total at or below 20. Distribute them through upper, middle, side, and lower interstitial gaps instead of placing them all at the bottom. Examples include one tiny heart-and-dot cluster, a miniature drink, paw mark, paperclip, share arrow, flower, camera sparkle, or theme-colored symbol. Keep each filler directly relevant; avoid generic random confetti.
+- Keep the palette limited but normally saturated. Let the pale sheet and white cut borders create separation instead of fading the character colors.
+- Use no sticker overlap, cropped cut contours, cast shadows, glossy vinyl effects, 3D blister effects, rectangular panels, UI cards, mockup hands, branding, logos, or watermarks.
+
+### Reuse a small amount of relevant conversation context
+
+- Inspect the current conversation for additional objects, products, places, colors, motifs, screenshots, or supporting images that directly relate to the chosen sticker theme.
+- When a relevant contextual element would make the sheet feel more personal, weave in only one or two such elements on a default 18-piece page, or keep all contextual elements below about 20% of the manifest.
+- Integrate a contextual element as a small scene detail, related prop cluster, outfit accent, or decorative motif. Keep the IP identity and the page theme dominant.
+- Treat supporting images as object or content references only, never as style or character-identity references. Preserve the Skill's approved house style and accepted character anchor.
+- Skip irrelevant context. Do not add a second character, visible brand logo, slogan, UI copy, or unrelated easter egg unless the user explicitly requests it.
+
+### Keep text optional and mouse-drawn
+
+- Include one short English thematic series name in the illustrated header by default. Lock it exactly before generation. This title is part of the header illustration, not a die-cut sticker. Never include a personal or character name unless explicitly requested.
+- Set the body-sticker text manifest to `none` by default, including on self-media pages. Prefer poses, expressions, hearts, thumbs-up, share arrows, phones, cameras, and gratitude gestures over written slogans.
+- Add body words only when the user explicitly requests them or when a required meaning cannot be communicated clearly through imagery.
+- Keep any necessary copy very short and render only the locked words.
+- Draw required text as deliberately naive mouse lettering: visibly hand-positioned strokes, gentle wobble, uneven stroke width, slight baseline drift, awkward but readable spacing, and small local corrections. It must look like a child carefully drawing letters with a basic mouse or trackpad.
+- Never render sticker copy as a typeset font, polished hand-lettering, calligraphy, vector typography, uniform marker lettering, or a clean digital caption.
+
+### Plan the sticker manifest before generation
+
+Prepare a compact manifest for each page containing:
+
+- exact theme
+- exact short header series name and full-width header mini-scene
+- total body sticker count
+- scene-led stickers with tiny-IP action, setting, and essential props
+- character-action stickers with pose, expression, outfit, and prop
+- head-only or expressive-bust stickers
+- related prop clusters and six to eight theme-specific micro filler stickerlets
+- scale tier and intended outer-silhouette type for every sticker
+- zero to two optional conversation-context elements and the exact sticker or scene where each belongs
+- exact body-text manifest, or `none`
+- dominant sheet color and two to four accent colors derived from the anchor
+
+Ensure the planned count is between 10 and 20, no planned sticker depends on overlapping another sticker, and the manifest does not produce a straight row of standalone elements.
+
+### Sticker-sheet prompt
+
+```text
+Create one 3:4 portrait kiss-cut sticker sheet using GPT Image 2.
+
+IDENTITY REFERENCE — HIGHEST PRIORITY: use the accepted mini pen-doodle character anchor exactly. Preserve [exact hair outer silhouette, crown tufts, bang divisions, side-lock and back-hair lengths, ear or horn geometry and placement, face proportions, eye shape and color, skin tone, signature colors, outfit and accessories]. Repeat these invariants in every character appearance, including tiny scenes and head-only stickers. Never shorten, simplify, restyle, mirror, or improvise the hair. Theme-appropriate clothing may vary only as specified below.
+
+HOUSE STYLE INSIDE EACH STICKER: mini pen-doodle illustration; hesitant wobbly black pen contours with clearly visible irregular breaks; awkward hand-drawn shapes; internally clean flat color shapes deliberately slightly misregistered from selected outlines through tiny white slivers, shortfalls, or small edge overhangs; normal clear saturation; limited color count; childlike messy-cute charm. Broken but not uniformly dashed, misregistered but still legible. No glossy anime rendering, 3D rendering, vector-perfect curves, painterly texture, crayon fills, mottled color, or faded gray-brown cast.
+
+PAGE STRUCTURE: exact 3:4 portrait with two integrated zones. HEADER: reserve only the top 12–16% as one full-width rectangular [contrasting flat color] block with no packaging hole. Render this exact short series name: [locked title]. Integrate one tiny accepted-IP appearance into [complete simple theme mini-scene] across the header. The header is one continuous illustration, not a sticker: no white border, die-cut halo, sticker contour, cut line, floating sticker, or separate panel around its character, props, scene, or text. STICKER FIELD: use the lower 84–88% as one uninterrupted [uniform very light pastel color] backing field, flat and texture-free.
+
+BODY LAYOUT: arrange exactly [10–20] independent irregular die-cut pieces only inside the sticker field as a balanced staggered field with a gentle diagonal or S-curve rhythm. Default to 18. Combined cut-border footprint covers about 75–82% of the sticker field. After placing the primary pieces, perform a density pass: add or reposition six to eight very small theme-related filler stickerlets until no empty pocket is much larger than one micro stickerlet, while preserving clear separation. Occupy upper, middle, side, and lower areas; do not push prop clusters or accents into one bottom band. Form two tidy visual rails with roughly equal side margins. Every body piece is fully visible, has its own continuous white or very pale kiss-cut border, and does not touch, overlap, merge, or crop. Keep compact consistent breathing gaps and gentle rotations. Never arrange items in straight rows, uniform columns, a rigid grid, or a separate prop strip.
+
+THEME: [life / work / self-media creator support].
+STICKER MANIFEST: [enumerate every scene-led sticker, character action, cropped head or bust, related prop cluster, text element if required, and decoration cluster; include scale tier and silhouette direction; the enumeration count must equal the requested total].
+CONTENT MIX: for a default 18-piece sticker field, use about 3 scene-led stickers with a tiny IP, 3 character-action stickers, 3 head-only or expressive-bust stickers, 3 related prop clusters, and 6 very small theme-specific filler stickerlets. Keep every piece directly tied to the theme and the IP's world. Vary outer silhouettes: wide scene, tall action, diagonal action, compact head with the complete anchored hairstyle, angular cluster, elongated cluster, and tiny irregular motif. Do not make every sticker a full-body character or the same rounded shape.
+
+CONVERSATION CONTEXT: [NONE, or list one to two directly relevant contextual elements and the exact scene or cluster where each appears]. Keep contextual material below about 20% of the manifest. Use it only as content detail, never as a style or identity source.
+
+HEADER TITLE — RENDER EXACTLY:
+[locked short series name]
+
+BODY TEXT MANIFEST:
+[exact requested body text or NONE]
+
+TEXT STYLE WHEN THE MANIFEST IS NOT NONE: render every required word as naive mouse-drawn lettering with visibly wobbly hand-positioned strokes, uneven stroke width, slight baseline drift, awkward but readable spacing, and tiny local corrections. No typeset font, vector typography, polished hand-lettering, calligraphy, or clean digital caption.
+
+Keep nearby body items thematically related as loose visual micro-clusters without touching. Balance them across the sticker field and scatter micro fillers into upper, middle, side, and lower gaps. No large empty pocket, bottom-loaded props or accents, overlap, cropped cut contours, straight rows, bottom prop strip, repeated blob silhouettes, chaotic rotations, cast shadows, glossy vinyl effects, 3D mockup, unrelated clip art, logo, watermark, invented body text, or paper texture.
+```
+
+Pass the accepted character anchor as the primary identity reference plus `style_ref_01` and `style_ref_02` as style-only references. Include `style_ref_03` only when its character cannot be confused with the target identity; omit it for cat-eared, green-haired, or otherwise visually similar targets. The accepted anchor always overrides every style reference for hair, ears, face, outfit, palette, and proportions.
+
+### Validate and repair sticker pages
+
+Check each page before continuing:
+
+1. correct 3:4 portrait ratio and a shallow 12–16% full-width header in a different flat color, with no packaging hole
+2. exact naive mouse-drawn series name plus one complete tiny-IP header scene, with no white border, die-cut halo, sticker contour, or cut line anywhere in the header
+3. 10–20 individually countable body pieces matching the manifest, defaulting to 18
+4. about 75–82% sticker-field cut-border footprint, with compact even gaps and no empty pocket much larger than one micro stickerlet
+5. balanced body field with occupied upper, middle, side, and lower zones; tidy left and right visual rails; no straight rows, uniform columns, rigid grid, separate prop strip, or bottom-loaded accents
+6. decisive variation in scale and silhouette across wide scenes, tall or diagonal actions, compact heads, angular or elongated clusters, and tiny filler stickerlets
+7. no overlapping, touching, cropping, or merged body cut borders
+8. one continuous white or pale irregular cut border around every body piece, but none around the header illustration
+9. coherent theme relationships and a balanced mix of scene-led, character-action, head-only, prop-cluster, and micro-filler content
+10. six to eight micro fillers distributed through gaps rather than collected at the bottom, while total pieces remain at or below 20
+11. unmistakable anchor identity in every appearance; exact anchored hair silhouette, bangs, side and back lengths, ear geometry, eyes, face proportions, outfit cues, and palette even when the IP is tiny, cropped, or secondary to a scene
+12. original broken pen contours and slightly loose flat-fill registration inside each body sticker
+13. normal clean saturation without a dusty, gray-brown, beige, vintage, or washed-out cast
+14. exact readable mouse-drawn header title; no body text unless explicitly requested or essential
+15. any reused conversation-context element is directly relevant, limited to one or two items or below about 20% of the manifest, and does not alter the house style or IP identity
+
+Keep accepted pages and regenerate only the failing page. Use direct corrections such as:
+
+- **Header missing or incomplete:** `Restore one complete full-width contrasting-color header across only the top 12–16%. Add the exact mouse-drawn series name and one tiny integrated theme scene.`
+- **Header too tall:** `Reduce the full-width header to 12–16% of page height and return the saved space to the sticker field.`
+- **Header looks like a sticker:** `Remove every white halo, cut border, floating sticker contour, and die-cut line from the header. Merge the tiny IP, props, text, and scene directly into one continuous full-bleed color-block illustration.`
+- **Overlapping or crowded:** `Shrink every sticker by about 15–25% while preserving its content. Separate every cut border and restore evenly distributed backing paper; no touching, overlap, or merged silhouettes.`
+- **Uneven density or large empty zone:** `Redistribute the same body stickers across upper, middle, side, and lower zones. Add or relocate six to eight tiny theme-relevant filler stickerlets until no empty pocket is much larger than one micro stickerlet, keep the total at or below 20, and preserve separate cut borders.`
+- **Too chaotic:** `Keep the varied sizes and silhouettes but reduce rotations, stabilize the upright reading direction, regularize the breathing gaps, and preserve one calm staggered visual rhythm.`
+- **Arranged in rows:** `Break every straight row and the separate prop strip. Reposition the same stickers along an asymmetric diagonal or S-curve flow, interleaving scenes, actions, heads, and prop clusters with generous gaps.`
+- **Props or accents collected at the bottom:** `Move prop clusters and micro fillers beside related scenes, actions, and heads throughout the sticker field. Leave at most one prop cluster in the lowest band and keep the bottommost pieces a mixed content set.`
+- **Shapes too similar:** `Diversify the outer cut silhouettes: make scenes wide and irregular, action poses tall or diagonal, heads compact and cropped, prop clusters angular or elongated, and the motif cluster asymmetrical. Do not use repeated oval or rounded-blob borders.`
+- **Too character-dominant:** `Replace several large full-body character stickers with two or three scene-led stickers containing a tiny IP, two cropped expressive heads, and related prop clusters while preserving the total count.`
+- **Unrelated elements:** `Remove orphan filler objects. Rebuild the page as three or four loose theme micro-clusters whose scenes, heads, actions, and props clearly relate to one another without touching.`
+- **Missing cut lines:** `Add one continuous white or very pale irregular die-cut border around every individual sticker, including the small decorative stickers.`
+- **Too generic:** `Replace unrelated icons with anchor-specific scenes, expressions, actions, and tightly related prop clusters.`
+- **Wrong count:** `Render exactly [count] individually countable stickers matching the enumerated manifest; do not split or merge items.`
+- **Identity drift:** `Restore the accepted anchor in every appearance. Copy the exact hair outer silhouette, crown tufts, bang divisions, side-lock and back-hair lengths, ear geometry and placement, eye shape and color, face proportions, outfit cues, and palette. Do not simplify the hairstyle on head-only stickers; show the complete anchored hair mass.`
+- **Unnecessary or wrong text:** `Keep only the exact header series name and any explicitly locked body text. Redraw the header title with naive wobbly mouse lettering, uneven stroke width, slight baseline drift, awkward but readable spacing, and no typeset-font appearance.`
+- **Context overload:** `Keep at most one or two directly relevant contextual elements, below about 20% of the manifest. Remove unrelated easter eggs and restore the accepted IP and page theme as the dominant content.`
+
+## 7. Validate and repair
 
 Check every output against this order of priority:
 
@@ -333,6 +485,6 @@ Regenerate a failed image with a direct correction. Use these repair clauses as 
 - **Too generic:** `Tie the scene directly to [article idea] using [specific action/prop]; remove unrelated decorative objects.`
 - **Identity drift:** `Restore the exact anchor hairstyle, outfit, accessories, palette, face, and proportions.`
 
-## 7. Deliver
+## 8. Deliver
 
-For ordinary generated illustrations, return the images in article order with a short label explaining the source idea. For infographics, return the automatically selected page count, the page plan, and the 3:4 images in reading order. For API handoff, return the character anchor, storyboard or infographic page plan, exact text manifests, and final prompts in copy-ready form together with the two official links from section 0.
+For ordinary generated illustrations, return the images in article order with a short label explaining the source idea. For infographics, return the automatically selected page count, the page plan, and the 3:4 images in reading order. For stickers, return each IP's accepted character anchor followed by the life, work, and self-media 3:4 sticker sheets, plus the three compact sticker manifests. For API handoff, return the character anchor, storyboard, infographic page plan, or sticker manifests as applicable; include exact text manifests and final prompts in copy-ready form together with the two official links from section 0.
