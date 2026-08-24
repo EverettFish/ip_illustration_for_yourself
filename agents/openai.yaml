@@ -1,4 +1,4 @@
 interface:
-  display_name: "IP Mini Illustration System"
-  short_description: "Create mini IP art, infographics, and sticker sheets"
-  default_prompt: "Use $ip-illustration-character-system to build my character anchor and create consistent mini IP illustrations, 3:4 infographics, or themed sticker sheets."
+  display_name: "萌粒风个人 IP 全套（All-in-one）"
+  short_description: "Build a complete Mengli personal-IP visual system"
+  default_prompt: "Use $ip-illustration-character-system to turn my reference into a consistent Mengli personal IP and create the complete asset set I request."
