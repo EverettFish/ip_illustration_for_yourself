@@ -6,6 +6,8 @@
 
 它会先把你的照片、宠物、原创角色、吉祥物或已有形象整理成一个稳定的 **萌粒风角色锚点**，后续的文章插图、信息图、实拍融合、贴纸、文件夹图标、信纸、拍立得边框、头像和表情包，都从这一个锚点继续生长。
 
+![image](https://github.com/EverettFish/ip_illustration_for_yourself/blob/main/img2show/title.png)
+
 ```text
 人物 / 宠物 / 角色参考图
           ↓
@@ -59,6 +61,8 @@
 > 用这个形象建立锚点，再给我做一套 All-in-one 萌粒风个人 IP。
 
 Skill 会复用同一个锚点，分别规划每条资产路线，不把不同画幅和功能挤进一次生成。
+
+![image](https://github.com/EverettFish/ip_illustration_for_yourself/blob/main/img2show/showcase.jpg)
 
 ---
 
