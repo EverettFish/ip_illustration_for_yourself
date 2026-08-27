@@ -1,13 +1,13 @@
 ---
 name: ip-illustration-character-system
-description: "Create a reusable Mengli-style personal IP and a complete all-in-one visual asset system: character anchors and turnarounds, article mini illustrations, 3:4 infographics, interactive real-photo IP fusion, themed sticker sheets, sets of four transparent 4:3 folder icons, mixed-layout seasonal letter paper, transparent Polaroid frames, scene avatars, and scene-enhanced expression packs. Use for personal mascots, article visuals, photo check-in or store/exhibition fusion, stickers, custom desktop folders, stationery, photo borders, profile images, reaction images, or any request that must preserve one IP consistently across many assets."
+description: "Create a reusable personal IP and an all-in-one visual asset system: character anchors, article illustrations, infographics, photo fusion, stickers, folder icons, stationery, Polaroid frames, avatars, expression packs, and reference-meme subject replacement in Mengli, source-meme, 3D, pixel, or another user-chosen style. Use for personal mascots, reaction images, meme remakes, or any request that must preserve one IP consistently across many assets."
 ---
 
 # 萌粒风个人 IP 全套（All-in-one）
 
 Author: **everettfish**
 
-Build one accepted personal-IP anchor, then reuse it consistently across ten output families. Treat the user's uploaded identity as the source of truth and the packaged images only as style, layout, or compositing references.
+Build one accepted personal-IP anchor, then reuse it consistently across eleven output families. Treat the user's uploaded identity as the source of truth and the packaged images only as style, layout, or compositing references.
 
 ## 0. Runtime rule
 
@@ -38,7 +38,7 @@ Read [references/core-style-and-identity.md](references/core-style-and-identity.
 2. Otherwise extract visible identity traits and create the anchor before downstream assets.
 3. Write a compact anchor-fidelity lock covering hair or fur silhouette, bangs and side locks, face and eyes, skin or body color, body proportions, outfit, accessories, and signature palette.
 4. Repeat the fidelity lock in every prompt, including tiny figures, shoulder-up crops, photo composites, and themed outfit variants.
-5. The anchor always overrides every style or layout reference.
+5. The anchor always overrides every style or layout reference. In 表情包夺舍, this includes the anchor's complete body identity and species anatomy; the meme reference still controls pose, expression, crop, and true separable garments.
 
 ## 3. Route the request
 
@@ -56,6 +56,7 @@ Read only the route file needed for the current task, and read that file complet
 | 8 | 拍立得边框、照片框、透明相框 | [polaroid-frames.md](references/polaroid-frames.md) | Love + Birthday + Reading + Tech, 4 frames |
 | 9 | 场景头像、主题头像、个人 IP 头像 | [scene-avatars.md](references/scene-avatars.md) | Coffee + Work + Sleep + Heart, 4 avatars |
 | 10 | 表情包、反应图、reaction pack | [expression-packs.md](references/expression-packs.md) | ask for series/theme, then 12 images |
+| 11 | 表情包夺舍、替换表情包主体、meme subject replacement | [expression-possession.md](references/expression-possession.md) | if no reference, offer 3 opt-in defaults; ask style; then 1 square image per reference |
 
 If a request combines routes, establish the anchor once, then process each route separately with its own manifest and validation. Do not blend incompatible output geometries into one generation call.
 
@@ -83,7 +84,7 @@ Prepare a compact manifest containing:
 - input-image role for every reference
 - route-specific invariants and avoid list
 
-Proceed without asking for confirmation when the user already supplied the decisive identity, content, theme, and count. Ask one concise question only when a missing choice would materially change the result; expression packs without a series or theme are the main default case.
+Proceed without asking for confirmation when the user already supplied the decisive identity, content, theme, and count. Ask one concise question only when a missing choice would materially change the result; expression packs without a series or theme are the main default case. For 表情包夺舍, the global output style is always a decisive choice: ask before generation unless the user has already selected the source meme's style, Mengli style, or another explicit style such as 3D or pixel art.
 
 ## 6. Generation and deterministic post-processing
 
