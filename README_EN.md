@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | [English](README_EN.md)
 
-> **Start from one confirmed character anchor and build a complete set of visually consistent, identity-stable, and reusable personal IP assets.
+> **Start from one confirmed character anchor and build a complete set of visually consistent, identity-stable, and reusable personal IP assets.**
 
 `ip_illustration_for_yourself` is more than just “turning a photo into a chibi character,” and it is not limited to article illustrations.
 
@@ -321,19 +321,19 @@ The simplest way to get started is:
 
 ## 🙋 FAQ
 
-** Can I use only one of the features?
+**Can I use only one of the features?**
 
 Yes.
 
 “All-in-One” means that all assets share the same anchor and visual-style system. You do **not** need to generate every asset type each time.
 
-** Can I add references for articles, products, locations, or brands?
+**Can I add references for articles, products, locations, or brands?**
 
 Yes.
 
 Additional reference images control only the relevant content. They do not replace the character's identity or the Mengli style.
 
-** Will text be added to images by default?
+**Will text be added to images by default?**
 
 Article mini illustrations, avatars, and standard reactions do not include text by default.
 
@@ -341,13 +341,13 @@ Infographics require text.
 
 Sticker sheets normally include only a short English series name in the header.
 
-** Can multiple characters appear in the same set?
+**Can multiple characters appear in the same set?**
 
 Yes.
 
 Create an identity lock for each character first, then specify which assets should contain individual characters and which ones may contain multi-character scenes.
 
-** Why verify the alpha channel for transparent images?
+**Why verify the alpha channel for transparent images?**
 
 Because **drawing a checkerboard pattern is not the same as transparency**.
 
