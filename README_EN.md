@@ -7,7 +7,7 @@
 `ip_illustration_for_yourself` is more than just “turning a photo into a chibi character,” and it is not limited to article illustrations.
 
 It first turns your photo, pet, original character, mascot, or existing visual identity into a stable **Mengli-style character anchor**. From that anchor, you can continue generating article illustrations, infographics, photo integrations, stickers, folder icons, stationery, Polaroid-style frames, avatars, and reaction packs.
-
+![image](https://github.com/EverettFish/ip_illustration_for_yourself/blob/main/img2show/banner.png)
 ```text
 Person / Pet / Character Reference
               ↓
@@ -64,7 +64,7 @@ It should feel more like a skilled illustrator casually developing a consistent 
 You can use any feature individually, or simply say:
 
 > Build a character anchor from this reference, then create a complete All-in-One Mengli-style personal IP set for me.
-
+![image](https://github.com/EverettFish/ip_illustration_for_yourself/blob/main/img2show/showcase.jpg)
 The Skill reuses the same anchor while planning each asset type independently instead of forcing different aspect ratios and purposes into a single generation.
 
 ---
