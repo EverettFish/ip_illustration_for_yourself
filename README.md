@@ -1,5 +1,7 @@
 # 🐟 萌粒风个人 IP 全套（All-in-one）
 
+[简体中文](README.md) | [English](README_EN.md)
+
 > **从一个确认过的形象锚点出发，生成一整套风格统一、身份稳定、可以长期复用的个人 IP 视觉资产。**
 
 `ip_illustration_for_yourself` 不只是“把照片画成 Q 版”，也不只服务文章配图。
